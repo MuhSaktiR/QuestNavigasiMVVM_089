@@ -49,7 +49,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = name,
             onValueChange = {name = it},
-            placeholder = { Text("Massukkan nama")},
+            placeholder = { Text("Masukkan nama")},
             label = {Text("Nama")},
             modifier = Modifier.fillMaxWidth().padding(5.dp)
         )
@@ -57,7 +57,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = nim,
             onValueChange = {nim = it},
-            placeholder = { Text("Massukkan NIM")},
+            placeholder = { Text("Masukkan NIM")},
             label = {Text("NIM")},
             modifier = Modifier.fillMaxWidth().padding(5.dp)
         )
@@ -78,7 +78,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = email,
             onValueChange = {email = it},
-            placeholder = { Text("Massukkan email")},
+            placeholder = { Text("Masukkan email")},
             label = {Text("Email")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             modifier = Modifier.fillMaxWidth().padding(5.dp)
@@ -87,7 +87,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = alamat,
             onValueChange = {alamat = it},
-            placeholder = { Text("Massukkan alamat")},
+            placeholder = { Text("Masukkan alamat")},
             label = {Text("Alamat")},
             modifier = Modifier.fillMaxWidth().padding(5.dp)
         )
@@ -95,7 +95,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = noHP,
             onValueChange = {noHP = it},
-            placeholder = { Text("Massukkan noHP")},
+            placeholder = { Text("Masukkan noHP")},
             label = {Text("No HP")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth().padding(5.dp)
