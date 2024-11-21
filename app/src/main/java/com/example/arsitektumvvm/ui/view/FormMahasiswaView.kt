@@ -4,6 +4,7 @@ import android.provider.MediaStore.Audio.Radio
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -23,9 +24,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
 @Composable
@@ -46,6 +49,13 @@ fun FormMahasiswaView(
 
     Column (Modifier.fillMaxSize().padding(16.dp)
         , horizontalAlignment = Alignment.CenterHorizontally){
+
+        Text("Data Formulir",
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold)
+
+        Spacer(Modifier.padding(16.dp))
+
         OutlinedTextField(
             value = name,
             onValueChange = {name = it},
@@ -95,7 +105,7 @@ fun FormMahasiswaView(
         OutlinedTextField(
             value = noHP,
             onValueChange = {noHP = it},
-            placeholder = { Text("Masukkan noHP")},
+            placeholder = { Text("Masukkan No Handphone")},
             label = {Text("No HP")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth().padding(5.dp)
