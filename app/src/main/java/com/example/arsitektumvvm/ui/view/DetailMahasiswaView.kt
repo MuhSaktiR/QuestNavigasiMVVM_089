@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.dp
 
 
@@ -33,7 +34,8 @@ fun DetailMahasiswaView(
 
     Column(modifier = modifier
         .fillMaxSize()
-        .padding(16.dp)
+        .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ){
         listDataMhs.forEach{ items ->
             CardSection(
