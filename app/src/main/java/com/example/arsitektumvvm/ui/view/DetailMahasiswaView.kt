@@ -13,6 +13,7 @@ fun DetailMahasiswaView(
 {
     val listDataMhs = listOf(
         Pair("Nama", uiStateMahasiswa.nama),
+        Pair("NIM", uiStateMahasiswa.nim),
         Pair("Alamat", uiStateMahasiswa.alamat),
         Pair("Gender", uiStateMahasiswa.gender),
     )
