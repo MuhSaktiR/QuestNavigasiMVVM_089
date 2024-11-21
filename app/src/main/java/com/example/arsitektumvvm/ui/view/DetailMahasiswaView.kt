@@ -6,8 +6,11 @@ import com.example.arsitektumvvm.model.DataMahasiswa
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.ui.unit.dp
 
@@ -16,6 +19,7 @@ import androidx.compose.ui.unit.dp
 fun DetailMahasiswaView(
     modifier: Modifier = Modifier,
     uiStateMahasiswa: DataMahasiswa,
+    onClickButton: () -> Boolean
 )
 {
     val listDataMhs = listOf(
@@ -27,12 +31,18 @@ fun DetailMahasiswaView(
         Pair("NoHP", uiStateMahasiswa.nohp),
     )
 
-    Column(){
+    Column(modifier = modifier
+        .fillMaxSize()
+        .padding(16.dp)
+    ){
         listDataMhs.forEach{ items ->
             CardSection(
                 judulParam = items.first,
                 isiParam = items.second
             )
+        }
+        Button(onClick = {onClickButton()}) {
+            Text(text = "Kembali")
         }
     }
 }
